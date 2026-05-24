@@ -19,18 +19,43 @@ a {
   top: 0;
   background: #ffffff;
   border-bottom: 1px solid #dce3ec;
-  padding: 14px 28px;
+  padding: 12px 28px;
+}
+
+.nav-title {
+  margin-bottom: 8px;
+  color: #17202a;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .topbar nav {
   display: flex;
-  gap: 18px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .topbar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 10px;
+  border-radius: 4px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.topbar a:hover {
+  background: #eef4fb;
+}
+
+.nav-accent {
+  background: #203040;
+  color: #ffffff;
+}
+
+.nav-accent:hover {
+  background: #2f4458;
 }
 
 .hero {
