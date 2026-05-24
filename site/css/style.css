@@ -1,4 +1,4 @@
-* {
+﻿* {
   box-sizing: border-box;
 }
 
@@ -77,6 +77,37 @@ article h3 {
   margin: 0 0 6px;
 }
 
+.process {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.process div {
+  background: #ffffff;
+  border: 1px solid #dce3ec;
+  padding: 14px;
+}
+
+.process strong,
+.process span {
+  display: block;
+}
+
+.process span {
+  color: #4f5f70;
+  font-size: 14px;
+}
+
+.diagram {
+  overflow-x: auto;
+  padding: 16px;
+  background: #17202a;
+  color: #ffffff;
+  font: 15px/1.5 Consolas, monospace;
+}
+
 @media (max-width: 640px) {
   .hero h1 {
     font-size: 32px;
@@ -84,5 +115,9 @@ article h3 {
 
   .hero {
     padding: 48px 20px;
+  }
+
+  .process {
+    grid-template-columns: 1fr;
   }
 }

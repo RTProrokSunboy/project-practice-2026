@@ -1,69 +1,108 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Проектная практика</title>
+    <title>Проектная практика 2026</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="topbar">
       <nav>
-        <a href="#about">О проекте</a>
-        <a href="#members">Участники</a>
+        <a href="#about">О практике</a>
+        <a href="#members">Участник</a>
         <a href="#journal">Журнал</a>
+        <a href="#variation">Вариативная часть</a>
         <a href="#resources">Ресурсы</a>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <p class="eyebrow">Проектная практика 2026</p>
-        <h1>Базовый HTTP-сервер на Python</h1>
+        <p class="eyebrow">Проектная (учебная) практика</p>
+        <h1>Проектная практика 2026</h1>
         <p>
-          Учебный проект по созданию простого веб-сервера с нуля:
-          от TCP-сокетов до отдачи HTML-страницы браузеру.
+          Учебная работа по освоению Git, Markdown, HTML/CSS, оформлению документации,
+          созданию сайта и выполнению вариативной части.
         </p>
       </section>
 
       <section id="about" class="section">
-        <h2>О проекте</h2>
+        <h2>О практике</h2>
         <p>
-          Проект посвящен изучению принципов работы протокола HTTP и созданию
-          минимального сервера на Python без использования веб-фреймворков.
+          Практика выполнялась индивидуально. В ходе работы был подготовлен репозиторий,
+          создана Markdown-документация, собран статический сайт и оформлен итоговый отчёт.
         </p>
+        <div class="process" aria-label="Структура практики">
+          <div>
+            <strong>Git</strong>
+            <span>репозиторий</span>
+          </div>
+          <div>
+            <strong>Markdown</strong>
+            <span>документация</span>
+          </div>
+          <div>
+            <strong>HTML/CSS</strong>
+            <span>сайт</span>
+          </div>
+          <div>
+            <strong>Python</strong>
+            <span>вариативная часть</span>
+          </div>
+          <div>
+            <strong>Отчёт</strong>
+            <span>DOCX/PDF</span>
+          </div>
+        </div>
       </section>
 
       <section id="members" class="section">
-        <h2>Участники</h2>
+        <h2>Участник</h2>
         <p>
-          Тарасенко Роман Олегович - выполнение практики, реализация HTTP-сервера,
-          подготовка документации и сайта.
+          Тарасенко Роман Олегович, группа 251-329. Формат выполнения практики:
+          индивидуально.
         </p>
       </section>
 
       <section id="journal" class="section">
         <h2>Журнал</h2>
         <article>
-          <h3>Выбор темы</h3>
-          <p>Для вариативной части была выбрана тема создания HTTP-сервера на Python.</p>
+          <h3>21 мая 2026</h3>
+          <p>Изучены требования к практике и определена структура репозитория.</p>
         </article>
         <article>
-          <h3>Изучение HTTP</h3>
-          <p>Были рассмотрены HTTP-запросы, ответы, статус-коды и заголовки.</p>
+          <h3>22 мая 2026</h3>
+          <p>Подготовлены основные папки, начато оформление документации и сайта.</p>
         </article>
         <article>
-          <h3>Реализация сервера</h3>
-          <p>Создан сервер, который обрабатывает GET-запросы и отдает файлы сайта.</p>
+          <h3>23 мая 2026</h3>
+          <p>Выбрана и начата вариативная часть: HTTP-сервер на Python.</p>
         </article>
+        <article>
+          <h3>24 мая 2026</h3>
+          <p>Доработаны сайт, отчёт и материалы вариативной части.</p>
+        </article>
+      </section>
+
+      <section id="variation" class="section">
+        <h2>Вариативная часть</h2>
+        <p>
+          Выбран вариант практической реализации технологии «с нуля»: создание базового
+          HTTP-сервера на Python. Сервер принимает GET-запросы, ищет файлы в папке
+          <code>site</code> и возвращает HTTP-ответ браузеру.
+        </p>
+        <pre class="diagram">Браузер -> HTTP-запрос -> Python socket server -> HTML/CSS-ответ -> Браузер</pre>
       </section>
 
       <section id="resources" class="section">
         <h2>Ресурсы</h2>
         <ul>
-          <li><a href="https://github.com/codecrafters-io/build-your-own-x">Build your own X</a></li>
+          <li><a href="https://git-scm.com/book/ru/v2">Git Book</a></li>
+          <li><a href="https://www.markdownguide.org/">Markdown Guide</a></li>
           <li><a href="https://developer.mozilla.org/ru/docs/Web/HTTP">MDN: HTTP</a></li>
-          <li><a href="https://docs.python.org/3/library/socket.html">Python socket documentation</a></li>
+          <li><a href="https://docs.python.org/3/library/socket.html">Python socket</a></li>
+          <li><a href="https://github.com/codecrafters-io/build-your-own-x">Build Your Own X</a></li>
         </ul>
       </section>
     </main>
