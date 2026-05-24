@@ -95,15 +95,21 @@ flowchart TD
 ## 7. Алгоритм работы
 
 ```mermaid
-sequenceDiagram
-    participant Browser as Браузер
-    participant Server as Сервер
-    participant Site as Папка site
-    Browser->>Server: GET / HTTP/1.1
-    Server->>Server: Разбор первой строки запроса
-    Server->>Site: Поиск index.html
-    Site-->>Server: Содержимое файла
-    Server-->>Browser: HTTP/1.1 200 OK + HTML
+flowchart TD
+    A["1. Пользователь открывает страницу в браузере"]
+    B["2. Браузер отправляет GET-запрос"]
+    C["3. src/main.py принимает запрос через socket"]
+    D["4. Сервер определяет путь к файлу"]
+    E{"5. Файл есть в папке site?"}
+    F["6. Сервер читает HTML/CSS-файл"]
+    G["7. Сервер возвращает HTTP 200 OK"]
+    H["8. Браузер показывает страницу"]
+    I["Файл не найден"]
+    J["Сервер возвращает HTTP 404 Not Found"]
+
+    A --> B --> C --> D --> E
+    E -- "Да" --> F --> G --> H
+    E -- "Нет" --> I --> J
 ```
 
 Пошагово:
