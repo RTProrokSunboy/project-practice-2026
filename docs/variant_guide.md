@@ -79,18 +79,18 @@ flowchart TD
     Repo --> Src["src"]
     Repo --> Site["site"]
     Repo --> Docs["docs"]
-    Src --> Server["server.py"]
+    Src --> Server["main.py"]
     Site --> Index["index.html"]
     Site --> Css["css/style.css"]
-    Docs --> Variation["variation.md"]
+    Docs --> Variation["variant_guide.md"]
 ```
 
 Основные файлы:
 
-- `src/server.py` - исходный код HTTP-сервера;
+- `src/main.py` - исходный код HTTP-сервера;
 - `site/index.html` - главная HTML-страница;
 - `site/css/style.css` - стили сайта;
-- `docs/variation.md` - описание вариативной части.
+- `docs/variant_guide.md` - описание вариативной части.
 
 ## 7. Алгоритм работы
 
@@ -174,7 +174,7 @@ if len(parts) < 2 or parts[0] != "GET":
 Команда запуска:
 
 ```bash
-python src/server.py
+python src/main.py
 ```
 
 После запуска в браузере нужно открыть:

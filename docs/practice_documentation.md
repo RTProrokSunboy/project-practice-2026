@@ -1,4 +1,4 @@
-# Практическая реализация HTTP-сервера
+﻿# Практическая реализация HTTP-сервера
 
 ## Введение
 
@@ -56,7 +56,7 @@ flowchart TD
     Repo --> Reports["reports: отчет"]
     Site --> Html["index.html"]
     Site --> Css["css/style.css"]
-    Src --> Server["server.py"]
+    Src --> Server["main.py"]
 ```
 
 ## Пошаговое руководство
