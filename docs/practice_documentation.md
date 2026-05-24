@@ -17,8 +17,13 @@ HTTP-сервер - это программа, которая принимает
 
 ## Архитектура
 
-```text
-Браузер -> HTTP-запрос -> Python socket server -> поиск файла -> HTTP-ответ -> Браузер
+```mermaid
+flowchart LR
+    B["Браузер"] --> R["HTTP GET-запрос"]
+    R --> S["Python socket server"]
+    S --> F["Поиск файла в папке site"]
+    F --> A["HTTP-ответ"]
+    A --> B
 ```
 
 ## Алгоритм работы сервера
@@ -28,6 +33,51 @@ HTTP-сервер - это программа, которая принимает
 3. Получает HTTP-запрос.
 4. Из первой строки запроса определяет путь к файлу.
 5. Возвращает найденный файл или ошибку `404 Not Found`.
+
+```mermaid
+sequenceDiagram
+    participant Browser as Браузер
+    participant Server as HTTP-сервер
+    participant Files as Папка site
+    Browser->>Server: GET / HTTP/1.1
+    Server->>Files: Найти index.html
+    Files-->>Server: Содержимое файла
+    Server-->>Browser: HTTP/1.1 200 OK + HTML
+```
+
+## Структура файлов
+
+```mermaid
+flowchart TD
+    Repo["project-practice-2026"]
+    Repo --> Docs["docs: документация"]
+    Repo --> Site["site: HTML/CSS-сайт"]
+    Repo --> Src["src: исходный код"]
+    Repo --> Reports["reports: отчет"]
+    Site --> Html["index.html"]
+    Site --> Css["css/style.css"]
+    Src --> Server["server.py"]
+```
+
+## Пошаговое руководство
+
+1. Создать TCP-сокет с помощью стандартного модуля `socket`.
+2. Привязать сервер к адресу `127.0.0.1` и порту `8080`.
+3. Перевести сокет в режим ожидания подключений.
+4. Получить HTTP-запрос от браузера.
+5. Разобрать первую строку запроса и определить путь к файлу.
+6. Найти файл в папке `site`.
+7. Сформировать HTTP-ответ со статусом, заголовками и телом ответа.
+8. Отправить ответ клиенту и закрыть соединение.
+
+## Пример кода
+
+```python
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
+    server_socket.bind(("127.0.0.1", 8080))
+    server_socket.listen()
+    client_socket, address = server_socket.accept()
+```
 
 ## Модификация
 
