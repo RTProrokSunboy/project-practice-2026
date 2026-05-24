@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вариативная часть 2.2</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <nav>
+        <a href="index.html">1.3 Сайт</a>
+        <a href="about.html">О практике</a>
+        <a href="members.html">Участник</a>
+        <a href="journal.html">Журнал</a>
+        <a href="variant.html">2.2 Вариативная часть</a>
+        <a href="resources.html">Ресурсы</a>
+      </nav>
+    </header>
+    <main class="page">
+      <h1>2.2 Практическая реализация технологии «с нуля»</h1>
+      <p>
+        Вариативная часть посвящена созданию базового HTTP-сервера на Python.
+        Сервер реализован без Flask, Django и других веб-фреймворков.
+      </p>
+      <h2>Что реализовано</h2>
+      <ul>
+        <li>запуск TCP-сервера на <code>127.0.0.1:8080</code>;</li>
+        <li>обработка GET-запросов;</li>
+        <li>отдача HTML и CSS файлов из папки <code>site</code>;</li>
+        <li>ответы <code>200 OK</code>, <code>400 Bad Request</code> и <code>404 Not Found</code>;</li>
+        <li>определение типа содержимого по расширению файла.</li>
+      </ul>
+      <h2>Схема работы</h2>
+      <pre class="diagram">Браузер -> GET-запрос -> src/main.py -> site/index.html -> HTTP-ответ</pre>
+      <h2>Файлы</h2>
+      <ul>
+        <li><code>src/main.py</code> - исходный код сервера;</li>
+        <li><code>docs/variant_guide.md</code> - техническое руководство;</li>
+        <li><code>site/</code> - статические файлы, которые отдаёт сервер.</li>
+      </ul>
+    </main>
+  </body>
+</html>
