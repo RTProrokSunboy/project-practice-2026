@@ -17,6 +17,7 @@ a {
 .topbar {
   position: sticky;
   top: 0;
+  z-index: 10;
   background: #ffffff;
   border-bottom: 1px solid #dce3ec;
   padding: 12px 28px;
@@ -65,6 +66,7 @@ a {
 }
 
 .logo {
+  display: block;
   width: 220px;
   max-width: 100%;
   margin-bottom: 22px;
